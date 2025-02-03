@@ -1,0 +1,6 @@
+﻿CREATE TABLE IF NOT EXISTS Passports (
+    Id SERIAL PRIMARY KEY,
+    Series VARCHAR(10) NOT NULL,
+    Number VARCHAR(20) NOT NULL,
+    IssueDate DATE NOT NULL
+);

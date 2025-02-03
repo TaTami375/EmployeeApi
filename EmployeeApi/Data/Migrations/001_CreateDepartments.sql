@@ -1,0 +1,5 @@
+﻿CREATE TABLE IF NOT EXISTS Departments (
+    Id SERIAL PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL,
+    Phone VARCHAR(20)
+);
