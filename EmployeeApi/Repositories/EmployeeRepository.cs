@@ -3,10 +3,10 @@ using Npgsql;
 using EmployeeApi.Models;
 using System.Data.SqlClient;
 using System.ComponentModel.Design;
-using EmployeeApi.Repositoryes.Interfaces;
+using EmployeeApi.Repositories.Interfaces;
 using EmployeeApi.Requests;
 using System.Data;
-namespace EmployeeApi.Repositoryes
+namespace EmployeeApi.Repositories
 {
 
     public class EmployeeRepository : IEmployeeRepository
@@ -20,16 +20,6 @@ namespace EmployeeApi.Repositoryes
 
         public async Task<int> AddEmployeeAsync(CreateEmployeeRequest employee)
         {
-            //// Проверяем, что PassportId не используется другим сотрудником
-            //if (employee.PassportId>0 && await IsPassportIdAlreadyUsedAsync(employee.PassportId, null))
-            //{
-            //    throw new InvalidOperationException("PassportId is already used by another employee.");
-            //}
-            //// Проверяем, что DepartmentId существует
-            //if (employee.DepartmentId > 0 && !await IsDepartmentExistsAsync(employee.DepartmentId))
-            //{
-            //    throw new InvalidOperationException("DepartmentId does not exist.");
-            //}
             using (var connection = _connectionFactory.GetConnection())
             {
                 var sql = @"

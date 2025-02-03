@@ -1,7 +1,7 @@
 ﻿using EmployeeApi.Models;
 using EmployeeApi.Requests;
 
-namespace EmployeeApi.Repositoryes.Interfaces
+namespace EmployeeApi.Repositories.Interfaces
 {
     public interface IDepartmentRepository
     {

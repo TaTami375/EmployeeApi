@@ -1,6 +1,6 @@
 ﻿using EmployeeApi.Models;
-using EmployeeApi.Repositoryes;
-using EmployeeApi.Repositoryes.Interfaces;
+using EmployeeApi.Repositories;
+using EmployeeApi.Repositories.Interfaces;
 using EmployeeApi.Requests;
 using EmployeeApi.Services.Interfaces;
 using Microsoft.AspNetCore.Http;

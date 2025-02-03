@@ -1,7 +1,7 @@
 ﻿using EmployeeApi.Models;
 using EmployeeApi.Exceptions.Department;
-using EmployeeApi.Repositoryes;
-using EmployeeApi.Repositoryes.Interfaces;
+using EmployeeApi.Repositories;
+using EmployeeApi.Repositories.Interfaces;
 using EmployeeApi.Requests;
 using EmployeeApi.Services.Interfaces;
 using EmployeeApi.Requests;

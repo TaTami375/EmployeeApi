@@ -2,7 +2,7 @@
 using EmployeeApi.Exceptions.Employee;
 using EmployeeApi.Exceptions.Passport;
 using EmployeeApi.Models;
-using EmployeeApi.Repositoryes.Interfaces;
+using EmployeeApi.Repositories.Interfaces;
 using EmployeeApi.Requests;
 using EmployeeApi.Services.Interfaces;
 

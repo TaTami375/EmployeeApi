@@ -1,10 +1,10 @@
 ﻿using EmployeeApi.Models;
 using Dapper;
 using Npgsql;
-using EmployeeApi.Repositoryes.Interfaces;
+using EmployeeApi.Repositories.Interfaces;
 using EmployeeApi.Requests;
 
-namespace EmployeeApi.Repositoryes
+namespace EmployeeApi.Repositories
 {
     public class DepartmentRepository : IDepartmentRepository
     {

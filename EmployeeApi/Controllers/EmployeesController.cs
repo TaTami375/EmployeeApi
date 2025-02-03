@@ -1,5 +1,5 @@
 ﻿using EmployeeApi.Models;
-using EmployeeApi.Repositoryes.Interfaces;
+using EmployeeApi.Repositories.Interfaces;
 using EmployeeApi.Requests;
 using EmployeeApi.Services.Interfaces;
 using Microsoft.AspNetCore.Http;
@@ -29,7 +29,8 @@ namespace EmployeeApi.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetEmployeeById(int id)
         {
-            return Ok(await employeeService.GetEmployeeById(id));
+            await employeeService.GetEmployeeById(id);
+            return Ok(id);
         }
         [HttpGet]
         public async Task<IActionResult> GetAllEmployees()

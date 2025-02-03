@@ -1,13 +1,14 @@
 using EmployeeApi;
 using EmployeeApi.Data.Migrations;
-using EmployeeApi.Repositoryes;
-using EmployeeApi.Repositoryes.Interfaces;
+using EmployeeApi.Repositories;
+using EmployeeApi.Repositories.Interfaces;
 using EmployeeApi.Services.Interfaces;
 using EmployeeApi.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Npgsql;
+using EmployeeApi.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -36,6 +37,12 @@ builder.Services.AddControllers()
     {
         options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
     });
+
+// Добавление фильтра
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add<CustomExceptionFilter>();
+});
 
 // Добавление Swagger
 builder.Services.AddSwaggerGen(c =>

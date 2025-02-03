@@ -1,10 +1,10 @@
 ﻿using EmployeeApi.Models;
 using Npgsql;
 using Dapper;
-using EmployeeApi.Repositoryes.Interfaces;
+using EmployeeApi.Repositories.Interfaces;
 using EmployeeApi.Requests;
 
-namespace EmployeeApi.Repositoryes
+namespace EmployeeApi.Repositories
 {
     public class PassportRepository : IPassportRepository
     {

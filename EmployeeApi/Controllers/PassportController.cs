@@ -1,6 +1,6 @@
 ﻿using EmployeeApi.Models;
-using EmployeeApi.Repositoryes;
-using EmployeeApi.Repositoryes.Interfaces;
+using EmployeeApi.Repositories;
+using EmployeeApi.Repositories.Interfaces;
 using EmployeeApi.Requests;
 using EmployeeApi.Services.Interfaces;
 using Microsoft.AspNetCore.Http;
@@ -30,7 +30,8 @@ namespace EmployeeApi.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPassportById(int id)
         {
-            return Ok(await passportService.GetPassportById(id));
+            await passportService.GetPassportById(id);
+            return Ok(id);
         }
         [HttpGet]
         public async Task<IActionResult> GetAllPassports()
